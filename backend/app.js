@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.use("/api/clientvisit", clientVisitRoute);
 app.use("/api/auth", authRoute);
 
-app.use((err, req, res) => {
+app.use((err, req, res , next) => {
   const { status = 500, message = "Something went wrong" } = err;
   return res.status(status).json({ message });
 });
