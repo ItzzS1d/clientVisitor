@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://clientvisitor-2.onrender.com",
+    origin: "*",
     credentials: true,
   })
 );
